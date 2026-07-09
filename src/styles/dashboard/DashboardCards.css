@@ -1,36 +1,43 @@
 .dashboard-cards{
     display:grid;
-    grid-template-columns:repeat(4,minmax(0,1fr));
-    gap:18px;
-    margin-bottom:28px;
+    grid-template-columns:repeat(4,1fr);
+    gap:16px;
+    margin-bottom:24px;
+    width:100%;
 }
 
 /* ================= CARD ================= */
 
 .stat-card{
+    position:relative;
     display:flex;
     align-items:center;
     gap:14px;
-    padding:18px;
+
+    width:100%;
+    min-height:90px;
+    padding:16px;
+
     background:#fff;
-    border-radius:18px;
     border:1px solid #edf2f7;
-    box-shadow:0 8px 22px rgba(15,23,42,.08);
-    transition:all .3s ease;
-    cursor:pointer;
-    position:relative;
+    border-radius:16px;
+
+    box-shadow:0 6px 18px rgba(15,23,42,.06);
+
     overflow:hidden;
-    min-width:0;
+    cursor:pointer;
+
+    transition:all .3s ease;
 }
 
 .stat-card::before{
     content:"";
     position:absolute;
-    top:0;
     left:0;
+    top:0;
     width:100%;
     height:4px;
-    background:linear-gradient(90deg,#4f46e5,#8b5cf6);
+    background:linear-gradient(90deg,#4F46E5,#8B5CF6);
     transform:scaleX(0);
     transform-origin:left;
     transition:.3s;
@@ -38,7 +45,7 @@
 
 .stat-card:hover{
     transform:translateY(-5px);
-    box-shadow:0 14px 30px rgba(79,70,229,.15);
+    box-shadow:0 14px 28px rgba(79,70,229,.15);
 }
 
 .stat-card:hover::before{
@@ -48,19 +55,22 @@
 /* ================= ICON ================= */
 
 .stat-icon{
-    width:54px;
-    height:54px;
-    min-width:54px;
-    border-radius:14px;
+    width:46px;
+    height:46px;
+    min-width:46px;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:22px;
+
+    border-radius:12px;
+    font-size:18px;
+
     transition:.3s;
 }
 
 .stat-card:hover .stat-icon{
-    transform:scale(1.08) rotate(-6deg);
+    transform:scale(1.08) rotate(-5deg);
 }
 
 /* ================= CONTENT ================= */
@@ -72,33 +82,32 @@
 
 .stat-content span{
     display:block;
-    font-size:13px;
+    font-size:12px;
     font-weight:500;
     color:#64748b;
-    margin-bottom:6px;
+    margin-bottom:4px;
 }
 
 .stat-content h2{
     margin:0;
-    font-size:20px;
+    font-size:22px;
     font-weight:700;
     color:#111827;
     line-height:1.2;
-    white-space:nowrap;
 }
 
 .stat-card:hover .stat-content h2{
-    color:#4f46e5;
+    color:#4F46E5;
 }
 
 .stat-content small{
     display:block;
-    margin-top:6px;
-    font-size:12px;
+    margin-top:5px;
+    font-size:11px;
     font-weight:600;
 }
 
-/* ================= TABLET ================= */
+/* ================= LARGE TABLET ================= */
 
 @media (max-width:1200px){
 
@@ -108,28 +117,65 @@
 
 }
 
-/* ================= MOBILE ================= */
+/* ================= TABLET ================= */
 
 @media (max-width:768px){
 
     .dashboard-cards{
         grid-template-columns:1fr;
-        gap:16px;
+        gap:14px;
     }
 
     .stat-card{
-        padding:16px;
+        min-height:85px;
+        padding:14px;
     }
 
     .stat-icon{
-        width:48px;
-        height:48px;
-        min-width:48px;
+        width:42px;
+        height:42px;
+        min-width:42px;
+        font-size:17px;
+    }
+
+    .stat-content h2{
         font-size:20px;
+    }
+
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width:480px){
+
+    .dashboard-cards{
+        gap:12px;
+    }
+
+    .stat-card{
+        min-height:80px;
+        padding:12px;
+        border-radius:14px;
+    }
+
+    .stat-icon{
+        width:40px;
+        height:40px;
+        min-width:40px;
+        font-size:16px;
+        border-radius:10px;
+    }
+
+    .stat-content span{
+        font-size:11px;
     }
 
     .stat-content h2{
         font-size:18px;
+    }
+
+    .stat-content small{
+        font-size:10px;
     }
 
 }

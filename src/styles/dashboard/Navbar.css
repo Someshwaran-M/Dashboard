@@ -1,106 +1,133 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-.navbar{
-    height:72px;
-    background:#ffffff;
-    border:1px solid #ececf5;
-    border-radius:18px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 24px;
-    margin-bottom:20px;
-    box-shadow:0 4px 18px rgba(0,0,0,.05);
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
 }
 
-/* ==========================
-   Left
-========================== */
+/* ================= NAVBAR ================= */
+
+.navbar{
+    height:78px;
+    background:#ffffff;
+    border-radius:20px;
+    padding:0 26px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    margin-bottom:24px;
+
+    border:1px solid #edf2f7;
+    box-shadow:0 10px 30px rgba(15,23,42,.06);
+}
+
+/* ================= LEFT ================= */
 
 .navbar-left{
     display:flex;
     align-items:center;
-    gap:16px;
+    gap:18px;
 }
 
 .menu-btn{
-    width:42px;
-    height:42px;
-    border:none;
-    border-radius:12px;
-    background:#f3f4ff;
-    color:#6c63ff;
+    width:46px;
+    height:46px;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
+    border:none;
+    border-radius:14px;
+
+    background:#eef2ff;
+    color:#5b5ce9;
+
     cursor:pointer;
     transition:.3s;
 }
 
 .menu-btn:hover{
-    background:#6c63ff;
+    background:#5b5ce9;
     color:#fff;
+    transform:translateY(-2px);
+}
+
+.menu-btn svg{
+    font-size:18px;
 }
 
 .welcome h2{
-    font-size:20px;
-    color:#222;
+    font-size:22px;
     font-weight:700;
-    line-height:1.2;
+    color:#111827;
 }
 
 .welcome p{
-    margin-top:3px;
+    margin-top:4px;
     font-size:13px;
-    color:#7b8196;
+    color:#6b7280;
 }
 
-/* ==========================
-   Center
-========================== */
+/* ================= CENTER ================= */
 
 .navbar-center{
     flex:1;
     display:flex;
     justify-content:center;
-    padding:0 30px;
+    padding:0 35px;
 }
 
 .search-box{
     width:100%;
-    max-width:430px;
-    height:46px;
+    max-width:470px;
+    height:48px;
+
     display:flex;
     align-items:center;
     gap:12px;
-    background:#f8f9ff;
-    border:1px solid #ececff;
-    border-radius:14px;
-    padding:0 16px;
+
+    padding:0 18px;
+
+    background:#f8faff;
+    border:1px solid #e5e7eb;
+    border-radius:16px;
+
+    transition:.3s;
 }
 
-.search-box svg{
-    color:#6c63ff;
-    font-size:15px;
+.search-box:hover{
+    border-color:#5b5ce9;
+}
+
+.search-box:focus-within{
+    border-color:#5b5ce9;
+    box-shadow:0 0 0 4px rgba(91,92,233,.12);
+}
+
+.search-icon{
+    color:#5b5ce9;
+    font-size:16px;
 }
 
 .search-box input{
     width:100%;
-    height:100%;
     border:none;
     outline:none;
     background:transparent;
     font-size:14px;
-    color:#333;
+    color:#111827;
 }
 
 .search-box input::placeholder{
     color:#9ca3af;
 }
 
-/* ==========================
-   Right
-========================== */
+/* ================= RIGHT ================= */
 
 .navbar-right{
     display:flex;
@@ -109,130 +136,139 @@
 }
 
 .icon-btn{
-    width:42px;
-    height:42px;
-    border:none;
-    border-radius:12px;
-    background:#f3f4ff;
-    color:#6c63ff;
+    width:46px;
+    height:46px;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    cursor:pointer;
+
     position:relative;
+
+    border:none;
+    border-radius:14px;
+
+    background:#eef2ff;
+    color:#5b5ce9;
+
+    cursor:pointer;
     transition:.3s;
 }
 
 .icon-btn:hover{
-    background:#6c63ff;
+    background:#5b5ce9;
     color:#fff;
+    transform:translateY(-2px);
 }
 
-.badge{
-    position:absolute;
-    top:-3px;
-    right:-3px;
-    width:18px;
-    height:18px;
-    border-radius:50%;
-    background:#ef4444;
-    color:#fff;
-    font-size:10px;
-    font-weight:600;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.user-box{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    padding:5px 10px;
-    border-radius:14px;
-    cursor:pointer;
-    transition:.3s;
-}
-
-.user-box:hover{
-    background:#f3f4ff;
-}
-
-.user-box img{
-    width:42px;
-    height:42px;
-    border-radius:50%;
-    object-fit:cover;
-    border:2px solid #d9dcff;
-}
-
-.user-box h4{
-    font-size:15px;
-    color:#222;
-    font-weight:600;
-}
-
-.user-box span{
-    font-size:12px;
-    color:#7b8196;
-}
-
-/* ==========================
-   Responsive
-========================== */
-
-@media(max-width:992px){
-
-.navbar-center{
-    display:none;
-}
-
-}
-
-@media(max-width:768px){
-
-.navbar{
-    height:64px;
-    padding:0 14px;
-}
-
-.welcome{
-    display:none;
-}
-
-.user-box div{
-    display:none;
-}
-
-}
-
-/* Fix icon alignment */
-
-.menu-btn,
-.icon-btn{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:0;
-    line-height:1;
-}
-
-.menu-btn svg,
 .icon-btn svg{
-    width:18px;
-    height:18px;
-    display:block;
-    color:inherit;
-    flex-shrink:0;
-}
-
-.search-icon{
-    color:#6c63ff;
-    flex-shrink:0;
+    font-size:18px;
 }
 
 .badge{
     position:absolute;
     top:-4px;
     right:-4px;
+
+    width:20px;
+    height:20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+    background:#ef4444;
+    color:#fff;
+
+    font-size:10px;
+    font-weight:700;
+
+    border:2px solid #fff;
+}
+
+/* ================= USER ================= */
+
+.user-box{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:8px 12px;
+
+    border-radius:16px;
+
+    cursor:pointer;
+    transition:.3s;
+}
+
+.user-box:hover{
+    background:#f8faff;
+}
+
+.user-box img{
+    width:46px;
+    height:46px;
+
+    border-radius:50%;
+    object-fit:cover;
+
+    border:2px solid #dbe4ff;
+}
+
+.user-info h4{
+    font-size:15px;
+    font-weight:700;
+    color:#111827;
+}
+
+.user-info span{
+    font-size:12px;
+    color:#6b7280;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+    .navbar-center{
+        display:none;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .navbar{
+        height:70px;
+        padding:0 15px;
+    }
+
+    .welcome{
+        display:none;
+    }
+
+    .user-info{
+        display:none;
+    }
+
+    .navbar-right{
+        gap:10px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .menu-btn,
+    .icon-btn{
+        width:42px;
+        height:42px;
+    }
+
+    .user-box img{
+        width:42px;
+        height:42px;
+    }
+
 }

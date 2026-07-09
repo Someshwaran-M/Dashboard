@@ -32,6 +32,7 @@ body,
     padding:20px;
     overflow:auto;
     background:#f5f7fb;
+    
 }
 .dashboard-body{
     display:grid;
@@ -286,7 +287,7 @@ a:hover{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:20px;
+    margin-bottom:10px;
 }
 
 

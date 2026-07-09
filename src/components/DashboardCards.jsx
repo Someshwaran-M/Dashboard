@@ -4,12 +4,14 @@ import {
   FaDollarSign,
   FaChartLine,
   FaCheckCircle,
+  FaArrowUp,
 } from "react-icons/fa";
 
 import "../styles/dashboard/DashboardCards.css";
 
 const cards = [
   {
+    id: 1,
     title: "Total Orders",
     value: "435",
     change: "+12.5%",
@@ -18,6 +20,7 @@ const cards = [
     bg: "#EEF2FF",
   },
   {
+    id: 2,
     title: "Revenue",
     value: "$16,240",
     change: "+8.3%",
@@ -26,6 +29,7 @@ const cards = [
     bg: "#ECFDF5",
   },
   {
+    id: 3,
     title: "Profit",
     value: "$8,530",
     change: "+4.8%",
@@ -34,6 +38,7 @@ const cards = [
     bg: "#FFF7ED",
   },
   {
+    id: 4,
     title: "Completed",
     value: "326",
     change: "+18.2%",
@@ -47,12 +52,17 @@ const DashboardCards = () => {
   return (
     <div className="dashboard-cards">
       {cards.map((card, index) => (
-        <div className="stat-card" key={index}>
-
+        <div
+          key={card.id}
+          className="stat-card fade-up"
+          style={{
+            animationDelay: `${index * 0.15}s`,
+          }}
+        >
           <div
             className="stat-icon"
             style={{
-              background: card.bg,
+              backgroundColor: card.bg,
               color: card.color,
             }}
           >
@@ -60,18 +70,18 @@ const DashboardCards = () => {
           </div>
 
           <div className="stat-content">
-            <span>{card.title}</span>
-            <h2>{card.value}</h2>
+            <span className="stat-title">{card.title}</span>
+
+            <h2 className="stat-value">{card.value}</h2>
 
             <small
-              style={{
-                color: card.color,
-              }}
+              className="stat-change"
+              style={{ color: card.color }}
             >
-              {card.change} this month
+              <FaArrowUp />
+              <span>{card.change} this month</span>
             </small>
           </div>
-
         </div>
       ))}
     </div>

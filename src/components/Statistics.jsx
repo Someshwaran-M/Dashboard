@@ -13,16 +13,16 @@ import "../styles/dashboard/Statistics.css";
 
 const chartData = {
   Month: [
-    { name: "Jan", revenue: 120, profit: 80 },
+    { name: "Jan", revenue: 120, profit: 280 },
     { name: "Feb", revenue: 180, profit: 110 },
     { name: "Mar", revenue: 260, profit: 170 },
-    { name: "Apr", revenue: 320, profit: 220 },
+    { name: "Apr", revenue: 120, profit: 420 },
     { name: "May", revenue: 420, profit: 300 },
     { name: "Jun", revenue: 390, profit: 280 },
-    { name: "Jul", revenue: 520, profit: 390 },
+    { name: "Jul", revenue: 120, profit: 490 },
     { name: "Aug", revenue: 610, profit: 470 },
     { name: "Sep", revenue: 560, profit: 430 },
-    { name: "Oct", revenue: 680, profit: 520 },
+    { name: "Oct", revenue: 380, profit: 720 },
     { name: "Nov", revenue: 740, profit: 600 },
     { name: "Dec", revenue: 820, profit: 690 },
   ],
@@ -30,18 +30,18 @@ const chartData = {
   Week: [
     { name: "Mon", revenue: 60, profit: 35 },
     { name: "Tue", revenue: 90, profit: 50 },
-    { name: "Wed", revenue: 120, profit: 80 },
+    { name: "Wed", revenue: 120, profit: 180 },
     { name: "Thu", revenue: 110, profit: 75 },
     { name: "Fri", revenue: 150, profit: 110 },
-    { name: "Sat", revenue: 180, profit: 140 },
+    { name: "Sat", revenue: 180, profit: 240 },
     { name: "Sun", revenue: 130, profit: 95 },
   ],
 
   Year: [
-    { name: "2021", revenue: 350, profit: 220 },
+    { name: "2021", revenue: 250, profit: 290 },
     { name: "2022", revenue: 520, profit: 360 },
     { name: "2023", revenue: 760, profit: 510 },
-    { name: "2024", revenue: 980, profit: 720 },
+    { name: "2024", revenue: 680, profit: 920 },
     { name: "2025", revenue: 1240, profit: 910 },
   ],
 };
@@ -72,40 +72,88 @@ export default function Statistics() {
 
       <div className="chart">
         <ResponsiveContainer width="100%" height={330}>
-          <AreaChart data={chartData[filter]}>
+          <AreaChart
+            data={chartData[filter]}
+            margin={{
+              top: 20,
+              right: 10,
+              left: 0,
+              bottom: 0,
+            }}
+          >
             <defs>
               <linearGradient id="rev" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#4F46E5" stopOpacity={0.3} />
-                <stop offset="95%" stopColor="#4F46E5" stopOpacity={0} />
+                <stop offset="5%" stopColor="#3B82F6" stopOpacity={0.35} />
+                <stop offset="95%" stopColor="#3B82F6" stopOpacity={0} />
               </linearGradient>
 
               <linearGradient id="pro" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stopColor="#16A34A" stopOpacity={0.3} />
-                <stop offset="95%" stopColor="#16A34A" stopOpacity={0} />
+                <stop offset="5%" stopColor="#10B981" stopOpacity={0.35} />
+                <stop offset="95%" stopColor="#10B981" stopOpacity={0} />
               </linearGradient>
             </defs>
 
-            <CartesianGrid stroke="#edf2f7" vertical={false} />
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
+            <CartesianGrid
+              stroke="#edf2f7"
+              vertical={false}
+              strokeDasharray="4 4"
+            />
 
-            {/* Revenue */}
+            <XAxis
+              dataKey="name"
+              axisLine={false}
+              tickLine={false}
+              tick={{
+                fill: "#94A3B8",
+                fontSize: 12,
+              }}
+            />
+
+            <YAxis hide />
+
+            <Tooltip
+              cursor={{
+                stroke: "#CBD5E1",
+                strokeWidth: 2,
+              }}
+              contentStyle={{
+                borderRadius: "12px",
+                background: "#6B7280",
+                border: "none",
+                color: "#fff",
+                boxShadow: "0 10px 25px rgba(0,0,0,.18)",
+              }}
+              labelStyle={{
+                display: "none",
+              }}
+            />
+
             <Area
               type="monotone"
               dataKey="revenue"
-              stroke="#4F46E5"
+              stroke="#2563EB"
               strokeWidth={3}
               fill="url(#rev)"
+              activeDot={{
+                r: 7,
+                fill: "#2563EB",
+                stroke: "#fff",
+                strokeWidth: 3,
+              }}
             />
 
-            {/* Profit */}
             <Area
               type="monotone"
               dataKey="profit"
-              stroke="#16A34A"
+              stroke="#10B981"
               strokeWidth={3}
               fill="url(#pro)"
+              activeDot={{
+                r: 7,
+                fill: "#10B981",
+                stroke: "#fff",
+                strokeWidth: 3,
+              }}
             />
           </AreaChart>
         </ResponsiveContainer>
