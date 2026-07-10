@@ -47,7 +47,6 @@ const LiveMap = () => {
         </button>
       </div>
 
-      {/* Cards */}
       <div className="livemap-cards">
 
         <div className="livemap-card">
@@ -102,7 +101,7 @@ const LiveMap = () => {
         </table>
       </div>
 
-      {/* Google Map */}
+     
       <div className="map-container">
         <iframe
           title="Google Map"
@@ -114,7 +113,7 @@ const LiveMap = () => {
         ></iframe>
       </div>
 
-      {/* Driver Table */}
+  
       
 
     </div>

@@ -75,7 +75,7 @@ const Drivers = () => {
   return (
     <div className="d1-page">
 
-      {/* Header */}
+
       <div className="d1-header">
         <div>
           <h1>Drivers</h1>
@@ -90,7 +90,7 @@ const Drivers = () => {
         </button>
       </div>
 
-      {/* Cards */}
+   
       <div className="d1-cards">
 
         <div className="d1-card">
@@ -119,7 +119,7 @@ const Drivers = () => {
 
       </div>
 
-      {/* Search & Filter */}
+
       <div className="d1-toolbar">
 
         <div className="search-box-d1">
@@ -143,7 +143,7 @@ const Drivers = () => {
 
       </div>
 
-      {/* Table */}
+
       <div className="d1-table">
 
         <table>

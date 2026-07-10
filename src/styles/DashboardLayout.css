@@ -1,8 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
-/* ==========================
-   Layout
-========================== */
 
 .layout{
     display:flex;
@@ -12,9 +9,7 @@
     background:#f5f7fb;
 }
 
-/* ==========================
-   Content Area
-========================== */
+
 
 .content{
     flex:1;
@@ -25,9 +20,7 @@
     overflow:hidden;
 }
 
-/* ==========================
-   Navbar
-========================== */
+
 
 .navbar{
     flex-shrink:0;
@@ -36,9 +29,7 @@
     z-index:100;
 }
 
-/* ==========================
-   Main Body
-========================== */
+
 
 .page-content{
     flex:1;
@@ -49,9 +40,7 @@
     overflow:hidden;
 }
 
-/* ==========================
-   Left Content
-========================== */
+
 
 .main-section{
     min-width:0;
@@ -73,9 +62,6 @@
     background:#eef1f7;
 }
 
-/* ==========================
-   Right Panel
-========================== */
 
 .right-section{
     width:430px;
@@ -90,9 +76,6 @@
     width:100%;
 }
 
-/* ==========================
-   Responsive
-========================== */
 
 @media (max-width:1200px){
 

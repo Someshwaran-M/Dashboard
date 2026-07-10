@@ -14,9 +14,6 @@
     overflow:hidden;
 }
 
-/* ==========================
-   Logo
-========================== */
 
 .logo{
     display:flex;
@@ -38,9 +35,6 @@
     color:#111;
 }
 
-/* ==========================
-   Profile
-========================== */
 
 .profile{
     display:flex;
@@ -80,9 +74,6 @@
     font-weight:500;
 }
 
-/* ==========================
-   Menu
-========================== */
 
 .menu{
     list-style:none;
@@ -126,9 +117,6 @@
     color:#5b5ce9;
 }
 
-/* ==========================
-   Logout Button
-========================== */
 
 .logout-btn{
     margin-top:20px;
@@ -153,17 +141,12 @@
     transform:translateY(-2px);
 }
 
-/* ==========================
-   Scrollbar
-========================== */
+
 
 .sidebar::-webkit-scrollbar{
     display:none;
 }
 
-/* ==========================
-   Responsive
-========================== */
 
 @media (max-width:1100px){
 

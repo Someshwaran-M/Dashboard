@@ -11,7 +11,6 @@
     overflow:hidden;
 }
 
-/* ================= HEADER ================= */
 
 .statistics-header{
     display:flex;
@@ -55,7 +54,6 @@
     margin:0;
 }
 
-/* ================= FILTER ================= */
 
 .filter-buttons{
     display:flex;
@@ -85,14 +83,14 @@
     box-shadow:0 6px 14px rgba(79,70,229,.25);
 }
 
-/* ================= CHART ================= */
+
 
 .chart{
     width:100%;
     height:300px;
 }
 
-/* ================= RECHARTS ================= */
+
 
 .recharts-wrapper{
     font-family:inherit;
@@ -118,28 +116,27 @@
     font-weight:500;
 }
 
-/* Smooth Lines */
+
 
 .recharts-line-curve{
     stroke-linecap:round;
     stroke-linejoin:round;
 }
 
-/* Data Points */
 
 .recharts-line-dots circle{
     stroke:#fff;
     stroke-width:2;
 }
 
-/* Active Dot */
+
 
 .recharts-active-dot circle{
     stroke:#fff;
     stroke-width:3;
 }
 
-/* Tooltip */
+
 
 .recharts-tooltip-wrapper{
     outline:none;
@@ -163,13 +160,12 @@
     font-weight:600 !important;
 }
 
-/* Legend */
 
 .recharts-legend-wrapper{
     padding-bottom:10px;
 }
 
-/* ================= RESPONSIVE ================= */
+
 
 @media (max-width:992px){
 

@@ -9,14 +9,12 @@
     flex-direction:column;
 }
 
-/* Scrollable Area */
 .drivers-list{
     flex:1;
     overflow-y:auto;
     padding-right:8px;
 }
 
-/* Custom Scrollbar */
 .drivers-list::-webkit-scrollbar{
     width:6px;
 }
@@ -39,7 +37,7 @@
     margin-top:20px;
     flex-shrink:0;
 }
-/* ================= Header ================= */
+
 
 .driver-header{
     display:flex;
@@ -73,7 +71,7 @@
     color:#fff;
 }
 
-/* ================= Driver List ================= */
+
 
 .driver-list{
     flex:1;
@@ -90,7 +88,6 @@
     border-radius:20px;
 }
 
-/* ================= Driver Card ================= */
 
 .driver-card{
     display:flex;
@@ -117,7 +114,6 @@
     border:3px solid #eef2ff;
 }
 
-/* ================= Driver Info ================= */
 
 .driver-info{
     flex:1;
@@ -160,7 +156,6 @@
     font-size:8px;
 }
 
-/* ================= Details ================= */
 
 .driver-details{
     display:grid;
@@ -191,7 +186,6 @@
     margin-bottom:12px;
 }
 
-/* ================= Progress ================= */
 
 .progress{
     width:100%;
@@ -207,7 +201,6 @@
     background:linear-gradient(90deg,#4f46e5,#8b5cf6);
 }
 
-/* ================= Button ================= */
 
 .view-all{
     margin-top:18px;
@@ -231,7 +224,6 @@
     background:#4338ca;
 }
 
-/* ================= Responsive ================= */
 
 @media(max-width:992px){
 

@@ -76,7 +76,6 @@ const Shift = () => {
   return (
     <div className="shift-page">
 
-      {/* Header */}
       <div className="shift-header">
         <div>
           <h1>Shift Management</h1>
@@ -90,8 +89,6 @@ const Shift = () => {
           + New Shift
         </button>
       </div>
-
-      {/* Cards */}
       <div className="shift-cards">
 
         <div className="shift-card">
@@ -120,7 +117,7 @@ const Shift = () => {
 
       </div>
 
-      {/* Search & Filter */}
+
       <div className="shift-toolbar">
 
         <div className="search-box-shift">
@@ -144,7 +141,7 @@ const Shift = () => {
 
       </div>
 
-      {/* Table */}
+
       <div className="shift-table">
         <table>
           <thead>

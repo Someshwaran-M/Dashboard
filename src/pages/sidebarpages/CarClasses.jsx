@@ -76,7 +76,7 @@ const CarClasses = () => {
   return (
     <div className="car-page">
 
-      {/* Header */}
+
       <div className="car-header">
         <div>
           <h1>Car Classes</h1>
@@ -91,7 +91,7 @@ const CarClasses = () => {
         </button>
       </div>
 
-      {/* Cards */}
+ 
       <div className="car-cards">
 
         <div className="car-card">
@@ -120,7 +120,7 @@ const CarClasses = () => {
 
       </div>
 
-      {/* Search */}
+   
       <div className="car-toolbar">
 
         <div className="search-box-car">
@@ -145,7 +145,6 @@ const CarClasses = () => {
 
       </div>
 
-      {/* Table */}
       <div className="car-table">
         <table>
 

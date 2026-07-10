@@ -1,5 +1,3 @@
-/* ================= Orders Page ================= */
-
 .orders-page{
     width:100%;
     height:100%;
@@ -11,7 +9,6 @@
     overflow:hidden;
 }
 
-/* ================= Header ================= */
 
 .orders-header{
     display:flex;
@@ -48,7 +45,6 @@
     background:#4338ca;
 }
 
-/* ================= Summary Cards ================= */
 
 .orders-cards{
     display:grid;
@@ -82,7 +78,6 @@
     font-size:13px;
 }
 
-/* ================= Toolbar ================= */
 
 .orders-toolbar{
     display:flex;
@@ -120,7 +115,7 @@
     cursor:pointer;
 }
 
-/* ================= Table ================= */
+
 
 .orders-table{
     flex:1;
@@ -160,7 +155,6 @@
     background:#f8fafc;
 }
 
-/* ================= Status ================= */
 
 .status{
     padding:6px 14px;
@@ -186,7 +180,7 @@
     background:#8b5cf6;
 }
 
-/* ================= Scrollbar ================= */
+
 
 .orders-table::-webkit-scrollbar{
     width:8px;
@@ -198,7 +192,7 @@
     border-radius:20px;
 }
 
-/* ================= Responsive ================= */
+
 
 @media(max-width:1200px){
 

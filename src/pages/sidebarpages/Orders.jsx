@@ -69,7 +69,7 @@ const Orders = () => {
 
   return (
     <div className="orders-page">
-      {/* Header */}
+   
       <div className="orders-header">
         <div>
           <h1>Orders Management</h1>
@@ -79,7 +79,7 @@ const Orders = () => {
         <button className="new-order-btn">+ New Order</button>
       </div>
 
-      {/* Cards */}
+   
       <div className="orders-cards">
         <div className="order-card">
           <FaBoxOpen />
@@ -106,7 +106,7 @@ const Orders = () => {
         </div>
       </div>
 
-      {/* Search & Filter */}
+   
       <div className="orders-toolbar">
         <div className="search-box-order">
           <FaSearch />
@@ -130,7 +130,7 @@ const Orders = () => {
         </select>
       </div>
 
-      {/* Table */}
+
       <div className="orders-table">
         <table>
           <thead>

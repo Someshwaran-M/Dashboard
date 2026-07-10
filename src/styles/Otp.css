@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-/* Scoped styles */
 
 .otp-page{
     width: 100%;
@@ -195,7 +194,7 @@
     gap:10px;
     margin-bottom:24px;
 }
-/* Hover Effect */
+
 .otp-boxes input:hover{
     border-color:#6557B8;
     background:#ffffff;
@@ -203,7 +202,6 @@
     box-shadow:0 10px 20px rgba(101,87,184,.15);
 }
 
-/* Focus Effect */
 .otp-boxes input:focus{
     outline:none;
     border-color:#6557B8;
@@ -215,7 +213,6 @@
 }
 
 
-/* Error Style */
 .otp-boxes input.otp-error{
     border:2px solid #ef4444 !important;
     background:#fff5f5 !important;
@@ -232,9 +229,6 @@
     box-shadow:0 0 0 4px rgba(239,68,68,.15);
 }
 
-/* ==========================
-   VERIFY BUTTON
-========================== */
 
 .verify-btn{
     width:100%;
@@ -283,9 +277,7 @@
     font-size:14px;
     margin-bottom:15px;
 }
-/* ---------------------- */
-/* Animations */
-/* ---------------------- */
+
 
 @keyframes slideDown{
 
@@ -327,9 +319,6 @@
     }
 }
 
-/* ===========================
-   TABLET
-=========================== */
 
 @media (max-width:992px){
 
@@ -418,10 +407,6 @@ font-weight:700;
     }
 }
 
-/* ===========================
-   MOBILE
-=========================== */
-
 @media (max-width:576px){
 
     .otp-page{
@@ -498,9 +483,7 @@ font-weight:700;
     }
 }
 
-/* ===========================
-   SMALL MOBILE
-=========================== */
+
 
 @media (max-width:400px){
 

@@ -23,13 +23,13 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* Authentication */}
+     
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/otp" element={<Otp />} />
 
-        {/* Dashboard Layout */}
+    
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route index element={<Dashboard />} />
           <Route path="orders" element={<Orders />} />
