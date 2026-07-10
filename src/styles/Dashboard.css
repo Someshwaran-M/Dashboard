@@ -175,72 +175,6 @@
     animation:fadeUp .5s ease;
 }
 
-
-@media(max-width:1200px){
-
-.dashboard-body{
-    grid-template-columns:1fr;
-}
-
-.right-content{
-    order:-1;
-}
-
-}
-
-@media(max-width:992px){
-
-.dashboard-content{
-    padding:15px;
-}
-
-.section-title{
-    font-size:34px;
-}
-
-.dashboard-body{
-    gap:20px;
-}
-
-}
-
-@media(max-width:768px){
-
-.dashboard-content{
-    padding:12px;
-}
-
-.dashboard-body{
-    gap:18px;
-}
-
-.section-title{
-    font-size:28px;
-}
-
-.dashboard-card{
-    padding:20px;
-}
-
-}
-
-@media(max-width:480px){
-
-.dashboard-content{
-    padding:10px;
-}
-
-.section-title{
-    font-size:24px;
-}
-
-.dashboard-card{
-    padding:18px;
-}
-
-}
-
-
 .section-subtitle{
     margin-top:8px;
     color:#7b8196;
@@ -284,4 +218,112 @@
 .section-subtitle{
     font-size:15px;
     color:#6b7280;
+}
+
+
+@media (max-width:1200px){
+
+    .dashboard-body{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .left-content,
+    .right-content{
+        width:100%;
+    }
+
+    .right-content{
+        order:2;
+    }
+
+}
+
+@media (max-width:768px){
+
+    html,
+    body{
+        width:100%;
+        height:100%;
+        overflow-x:hidden;
+        overflow-y:auto;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .dashboard{
+        display:block;
+        width:100%;
+        min-height:100vh;
+        overflow-x:hidden;
+        overflow-y:auto;
+    }
+
+    .dashboard-content{
+        width:100%;
+        min-height:100vh;
+        height:auto;
+        padding:15px;
+        overflow-y:auto;
+        overflow-x:hidden;
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .dashboard-body{
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        gap:20px;
+    }
+
+    .left-content,
+    .right-content{
+        width:100%;
+    }
+
+    .menu-btn{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .sidebar{
+        position:fixed;
+        left:-280px;
+        top:0;
+        width:260px;
+        height:100vh;
+        overflow-y:auto;
+        background:#fff;
+        transition:.3s;
+        z-index:1001;
+    }
+
+    .sidebar.open{
+        left:0;
+    }
+
+    .close-btn{
+        display:block;
+        margin:15px;
+        border:none;
+        background:none;
+        font-size:24px;
+        cursor:pointer;
+    }
+
+    .sidebar-overlay{
+        position:fixed;
+        inset:0;
+        background:rgba(0,0,0,.4);
+        z-index:1000;
+    }
+
+    .dashboard table{
+        display:block;
+        width:100%;
+        overflow-x:auto;
+        white-space:nowrap;
+        -webkit-overflow-scrolling:touch;
+    }
+
 }
