@@ -70,19 +70,6 @@ const LiveMap = () => {
 
       </div>
 
-      {/* Google Map */}
-      <div className="map-container">
-        <iframe
-          title="Google Map"
-          src="https://maps.google.com/maps?q=Chennai&t=&z=12&ie=UTF8&iwloc=&output=embed"
-          width="100%"
-          height="350"
-          style={{ border: 0 }}
-          loading="lazy"
-        ></iframe>
-      </div>
-
-      {/* Driver Table */}
       <div className="livemap-table">
         <table>
           <thead>
@@ -114,6 +101,21 @@ const LiveMap = () => {
           </tbody>
         </table>
       </div>
+
+      {/* Google Map */}
+      <div className="map-container">
+        <iframe
+          title="Google Map"
+          src="https://maps.google.com/maps?q=Chennai&t=&z=12&ie=UTF8&iwloc=&output=embed"
+          width="100%"
+          height="350"
+          style={{ border: 0 }}
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      {/* Driver Table */}
+      
 
     </div>
   );

@@ -2,13 +2,14 @@
 
 .livemap-page{
     width:100%;
-    height:100%;
+    min-height:100vh;
     padding:20px;
     background:#f5f7fb;
     box-sizing:border-box;
     display:flex;
     flex-direction:column;
-    overflow:hidden;
+    overflow-y:auto;      /* Enable page scrolling */
+    overflow-x:hidden;
 }
 
 /* ================= Header ================= */
@@ -56,13 +57,13 @@
 .livemap-cards{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:10px;
-    margin-bottom:18px;
+    gap:15px;
+    margin-bottom:20px;
 }
 
 .livemap-card{
     background:#fff;
-    height:80px;
+    height:90px;
     border-radius:14px;
     display:flex;
     flex-direction:column;
@@ -91,12 +92,13 @@
 
 .map-container{
     width:100%;
-    height:350px;
+    max-width:900px;      /* Medium width */
+    height:400px;
+    margin:0 auto 20px;   /* Center map */
     background:#fff;
     border-radius:18px;
     overflow:hidden;
     box-shadow:0 10px 25px rgba(0,0,0,.08);
-    margin-bottom:18px;
 }
 
 .map-container iframe{
@@ -108,15 +110,18 @@
 /* ================= Table ================= */
 
 .livemap-table{
-    flex:1;
+    width:100%;
+    min-height:300px;
+    max-height:420px;      /* Internal scroll */
+    overflow:auto;
     background:#fff;
     border-radius:18px;
-    overflow:auto;
     box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
 .livemap-table table{
     width:100%;
+    min-width:800px;
     border-collapse:collapse;
 }
 
@@ -167,13 +172,15 @@
     background:#ef4444;
 }
 
-/* ================= Scrollbar ================= */
+/* ================= Scrollbars ================= */
 
+.livemap-page::-webkit-scrollbar,
 .livemap-table::-webkit-scrollbar{
     width:8px;
     height:8px;
 }
 
+.livemap-page::-webkit-scrollbar-thumb,
 .livemap-table::-webkit-scrollbar-thumb{
     background:#cbd5e1;
     border-radius:20px;
@@ -181,19 +188,22 @@
 
 /* ================= Responsive ================= */
 
-@media(max-width:1200px){
+@media (max-width:1200px){
 
     .livemap-cards{
         grid-template-columns:repeat(2,1fr);
     }
 
+    .map-container{
+        max-width:100%;
+        height:340px;
+    }
 }
 
-@media(max-width:768px){
+@media (max-width:768px){
 
     .livemap-page{
         padding:15px;
-        overflow:auto;
     }
 
     .livemap-header{
@@ -207,15 +217,27 @@
     }
 
     .map-container{
+        width:100%;
+        max-width:650px;
         height:280px;
     }
 
     .livemap-table{
-        overflow-x:auto;
+        overflow:auto;
     }
 
     .livemap-table table{
         min-width:700px;
     }
+}
 
+@media (max-width:480px){
+
+    .map-container{
+        height:220px;
+    }
+
+    .livemap-header h1{
+        font-size:22px;
+    }
 }
