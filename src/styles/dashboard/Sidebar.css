@@ -2,7 +2,8 @@
 
 .sidebar{
     width:260px;
-    height:100vh;
+    min-height:100dvh;
+    height:auto;
     background:#ffffff;
     border-right:1px solid #ececf5;
     display:flex;
