@@ -50,7 +50,7 @@
   overflow: hidden;
 
   min-width: 450px;
-  min-height: 630px;
+  min-height: 600px;
 }
 
 .login-left::after {
