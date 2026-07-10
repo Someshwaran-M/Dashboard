@@ -66,6 +66,7 @@ const Login = () => {
 </div>
 
   <h2>Login to Admin Panel</h2>
+  <p className="subtitle">Access the admin dashboard with your secure credentials.</p>
   <form onSubmit={handleLogin}>
 
     <div className="form-group">
