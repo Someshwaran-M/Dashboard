@@ -2,7 +2,7 @@
 
 .orders-page{
     width:100%;
-    height:auto
+    height:95%;
     padding:20px;
     background:#f5f7fb;
     box-sizing:border-box;
@@ -10,6 +10,7 @@
     flex-direction:column;
     overflow:hidden;
 }
+
 /* ================= Header ================= */
 
 .orders-header{
@@ -51,21 +52,21 @@
 
 .orders-cards{
     display:grid;
-    grid-template-columns:repeat(4, minmax(220px, 1fr));
-    gap:15px;
-    margin-bottom:20px;
-    flex-shrink:0;
+    grid-template-columns:repeat(4,1fr);
+    gap:8px;
+    margin-bottom:16px;
 }
+
 .order-card{
-    height:110px;
     background:#fff;
-    border-radius:15px;
+    height:80px;
+    padding:12px;
+    border-radius:14px;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     box-shadow:0 5px 15px rgba(0,0,0,.08);
-    flex-shrink:0;
 }
 
 .order-card svg{
@@ -87,8 +88,8 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
-    margin-bottom:20px;
-    flex-shrink:0;
+    gap:16px;
+    margin-bottom:18px;
 }
 
 .search-box-order{
@@ -125,10 +126,8 @@
     flex:1;
     background:#fff;
     border-radius:18px;
-    overflow-y:auto;
-    overflow-x:hidden;
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-    min-height:0;
+    overflow:auto;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
 .orders-table table{
