@@ -1,12 +1,12 @@
 /* Scoped styles */
 
 .register-page{
-  width: 100%;
-  min-height: 920px;
+   width: 100%;
+  min-height: 750px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 24px;
+  padding: 20px;
   position: relative;
   background: #f8f8ff;
   box-sizing: border-box;
