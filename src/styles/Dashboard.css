@@ -2,17 +2,11 @@
 
 /* Resets and global root styling are handled in index.css and App.css */
 .dashboard{
-     width: 100%;
-  min-height: 750px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  position: relative;
-  background: #f8f8ff;
-  box-sizing: border-box;
-  overflow: hidden;
- 
+    display:flex;
+    width:100%;
+    min-height:100dvh;
+    min-height:100svh;
+    background:#f5f7fb;
 }
 
 .dashboard-content{
