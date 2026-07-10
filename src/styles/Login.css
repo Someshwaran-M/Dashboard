@@ -2,11 +2,11 @@
 
 .login-page {
   width: 100%;
-  min-height: 920px;
+  min-height: 830px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 24px;
+  padding: 20px;
   position: relative;
   background: #f8f8ff;
   box-sizing: border-box;
@@ -14,51 +14,6 @@
  
 }
 
-/*.login-page::before{
-    content: "";
-    position: absolute;
-    width: 280px;
-    height: 280px;
-    top: -120px;
-    left: -120px;
-    border-radius: 50%;
-    background: rgba(129,92,255,.18);
-    z-index: 0;
-}
-
-.login-page::after{
-    content: "";
-    position: absolute;
-    width: 280px;
-    height: 280px;
-    bottom: -120px;
-    right: -120px;
-    border-radius: 50%;
-    background: rgba(129,92,255,.18);
-    z-index: 0;
-}
-
-
-
-.dots {
-  position: absolute;
-  width: 110px;
-  height: 110px;
-  z-index: 1;
-  background-image: radial-gradient(#8b5cf6 2px, transparent 2px);
-  background-size: 20px 20px;
-  opacity: 0.35;
-}
-
-.dots-top {
-  top: 55px;
-  right: 55px;
-}
-
-.dots-bottom {
-  bottom: 55px;
-  left: 55px;
-}*/
 .login-card{
     width:100%;
     max-width:1080px;
